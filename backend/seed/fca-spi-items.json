@@ -1,0 +1,346 @@
+[
+    {
+        "itemId": "P0-D1",
+        "title": "Scope statement",
+        "description": "Define the exact scope of the SPI programme (what we do and do not do) and freeze the initial regulatory perimeter assumptions.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P0-D2",
+        "title": "Outsourcing and dependency list",
+        "description": "Inventory of all third parties and dependencies (Stripe, Wise, Sumsub, background checks provider, hosting, etc), including roles and data/funds touchpoints.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P0-D3",
+        "title": "Glossary of terms",
+        "description": "Single source of truth for key definitions used across the pack (capital, admin fee, reserve, insurance, award, pot, member funds, etc).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P1-D1",
+        "title": "Funds Flow Map",
+        "description": "One-page diagram and narrative of end-to-end funds movement (actors, accounts, timing, amounts, controls, exceptions).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P1-D2",
+        "title": "PSRs Schedule 1 mapping",
+        "description": "One-page mapping of Consorcia activities to the Payment Services Regulations 2017 Schedule 1 payment service categories (in-scope/out-of-scope rationale).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P1-D3",
+        "title": "SPI eligibility and constraints note",
+        "description": "Document SPI eligibility assumptions and constraints (UK-only, transaction limits, reporting approach, scope boundaries).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P1-D4",
+        "title": "Customer money ownership and purpose statement",
+        "description": "Plain-English statement of who benefits from funds at each stage, permitted uses of member funds, and separation from operating funds.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P2-D1",
+        "title": "Client Funds Policy",
+        "description": "Policy covering segregation, commingling prohibition, permitted movements, fee sweeps, refunds, and oversight responsibilities.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P2-D2",
+        "title": "Safeguarding arrangements document",
+        "description": "How member funds are protected in practice: accounts, controls, reconciliations, and failure scenarios.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P2-D3",
+        "title": "Reconciliation procedure",
+        "description": "Procedure and templates to reconcile platform ledger vs Wise vs Stripe settlement reports, with cadence, sign-off, and exception handling.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P2-D4",
+        "title": "Access control matrix",
+        "description": "Least-privilege access model for Stripe, Wise, AWS, and admin dashboard, with roles and permissions documented.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P2-D5",
+        "title": "Payment approval procedure",
+        "description": "Maker-checker style approvals for awards, refunds, and admin fee sweeps, including audit trail and evidence retention.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P2-D6",
+        "title": "Reserve and insurance governance note",
+        "description": "Rules, triggers, approvals, and logging for reserve usage and insurance handling (including what insurance is not used for).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P3-D1",
+        "title": "Operations manual (runbooks)",
+        "description": "Operational runbooks for monthly cycles, collections, award selection triggers, payouts, exceptions, and comms.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P3-D2",
+        "title": "Refunds and exits procedure",
+        "description": "Procedure for members leaving pre-award (notice period, deductions, calculations, payout SLA, evidence).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P3-D3",
+        "title": "Missed payments and default procedure",
+        "description": "Procedure for late/missed payments, exclusion criteria, default after award, escalation steps, and recovery approach.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P3-D4",
+        "title": "Complaints policy and log template",
+        "description": "Complaints handling policy with logging template, response targets, escalation, and outcomes recording.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P3-D5",
+        "title": "Customer communications pack",
+        "description": "Templates for key customer communications (DD notices, award notices, refund confirmations, exception notices).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P4-D1",
+        "title": "Business-wide AML and financial crime risk assessment",
+        "description": "Risk assessment covering customer types, products, channels, geographies (UK), and key risks/controls.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P4-D2",
+        "title": "AML/CTF policy",
+        "description": "Policy covering CDD, sanctions/PEP screening approach, escalation, SAR decision log, and record keeping.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P4-D3",
+        "title": "Onboarding SOP (ID and manual review)",
+        "description": "Step-by-step onboarding procedure: ID document, selfie, proof of address, human review, approvals, and audit trail.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P4-D4",
+        "title": "Transaction monitoring rules",
+        "description": "Simple, proportionate monitoring rules, thresholds, flags, and review workflow for suspicious patterns.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P4-D5",
+        "title": "Record keeping and retention policy",
+        "description": "Retention periods and storage locations for records, evidence, logs, communications, and audit data.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P4-D6",
+        "title": "Training plan and log",
+        "description": "Training plan and evidence log for AML, fraud, safeguarding, and operations (even if founder-only initially).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P5-D1",
+        "title": "Governance and responsibilities matrix (RACI)",
+        "description": "RACI for safeguarding, approvals, AML, operations, incident response, vendor oversight, and reporting.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P5-D2",
+        "title": "Fit and proper pack",
+        "description": "Fit and proper documentation for controllers and key roles (CV, experience narrative, declarations).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P5-D3",
+        "title": "Conflicts of interest policy",
+        "description": "Policy for identifying, declaring, and managing conflicts, including decision documentation.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P5-D4",
+        "title": "Policies index",
+        "description": "Single index listing all governance/compliance policies and where they live, with version control.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P5-D5",
+        "title": "Decision log template",
+        "description": "Template for capturing key decisions (reserve use, exceptions, refunds, write-offs) with rationale and approver.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P6-D1",
+        "title": "Information security policy and standards",
+        "description": "Security policy with measurable standards covering access control, logging, patching, secrets, and AWS posture.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P6-D2",
+        "title": "Incident response plan",
+        "description": "Incident response plan including detection, triage, containment, comms, post-incident review, and evidence retention.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P6-D3",
+        "title": "Change management and release policy",
+        "description": "Policy and workflow for controlled changes, approvals, testing, rollbacks, and audit trail.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P6-D4",
+        "title": "Business continuity and disaster recovery summary",
+        "description": "BCP/DR summary: recovery objectives, backups, restore tests, dependency failure plans.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P6-D5",
+        "title": "Third-party risk register and due diligence pack",
+        "description": "Register and due diligence evidence for Stripe, Wise, Sumsub, and other vendors, including monitoring cadence.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P7-D1",
+        "title": "Wind-down plan",
+        "description": "Plan for orderly wind-down: triggers, stopping collections, returning funds, comms, and responsibilities.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P7-D2",
+        "title": "Wind-down communications templates",
+        "description": "Templates for member communications during wind-down or major service disruption.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P7-D3",
+        "title": "Provider termination and account freeze runbook",
+        "description": "Runbook for Wise/Stripe restriction scenarios: operational steps, customer comms, and evidence capture.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P8-D1",
+        "title": "Programme of operations",
+        "description": "End-to-end narrative of the service and customer journey, payments flow, controls, and operational procedures.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P8-D2",
+        "title": "Business plan and financial projections",
+        "description": "Business plan with 12-24 month projections, revenue model (admin fees), volumes, and resourcing assumptions.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P8-D3",
+        "title": "Safeguarding pack compilation",
+        "description": "Compiled safeguarding pack combining policies, account structure, reconciliation evidence, and controls.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P8-D4",
+        "title": "Compliance pack compilation",
+        "description": "Compiled compliance pack including AML, complaints, governance, security, and wind-down materials.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P8-D5",
+        "title": "Evidence annex",
+        "description": "Annex of templates and sample filled evidence (reconciliations, approvals, logs, sample comms).",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    },
+    {
+        "itemId": "P8-D6",
+        "title": "Submission checklist and version control log",
+        "description": "Final submission checklist and version history for all documents and evidence included in the application pack.",
+        "owner": "Founder",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true
+    }
+]

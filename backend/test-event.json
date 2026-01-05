@@ -1,0 +1,40 @@
+{
+    "version": "2.0",
+    "routeKey": "ANY /v1/{proxy+}",
+    "rawPath": "/v1/regulators/FCA-SPI/items",
+    "rawQueryString": "",
+    "cookies": [],
+    "headers": {
+        "accept": "application/json",
+        "host": "va2ab0yyx3.execute-api.eu-west-2.amazonaws.com"
+    },
+    "queryStringParameters": {},
+    "requestContext": {
+        "accountId": "458798749965",
+        "apiId": "va2ab0yyx3",
+        "domainName": "va2ab0yyx3.execute-api.eu-west-2.amazonaws.com",
+        "domainPrefix": "va2ab0yyx3",
+        "http": {
+            "method": "GET",
+            "path": "/v1/regulators/FCA-SPI/items",
+            "protocol": "HTTP/1.1",
+            "sourceIp": "127.0.0.1",
+            "userAgent": "Custom/1.0"
+        },
+        "requestId": "test-request-id",
+        "routeKey": "ANY /v1/{proxy+}",
+        "stage": "$default",
+        "time": "05/Jan/2026:15:30:00 +0000",
+        "timeEpoch": 1767627000000,
+        "authorizer": {
+            "jwt": {
+                "claims": {
+                    "sub": "test-user-id",
+                    "email": "lex@zastras.uk"
+                },
+                "scopes": null
+            }
+        }
+    },
+    "isBase64Encoded": false
+}

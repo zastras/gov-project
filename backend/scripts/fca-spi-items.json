@@ -1,0 +1,92 @@
+[
+    {
+        "itemId": "SPI-001",
+        "title": "Senior Management Arrangements, Systems and Controls",
+        "description": "Comprehensive documentation of senior management responsibilities, governance structures, and control frameworks as required by SYSC sourcebook.",
+        "owner": "Chief Compliance Officer",
+        "status": "DRAFT",
+        "evidenceRequired": true,
+        "notes": "Initial draft completed. Awaiting legal review before submission to FCA."
+    },
+    {
+        "itemId": "SPI-002",
+        "title": "Conduct Risk Management Framework",
+        "description": "Framework for identifying, assessing, and managing conduct risks across all business lines and customer touchpoints.",
+        "owner": "Head of Risk",
+        "status": "REVIEW",
+        "evidenceRequired": true,
+        "notes": "Framework approved by ExCo. Final documentation in progress."
+    },
+    {
+        "itemId": "SPI-003",
+        "title": "Consumer Duty Implementation",
+        "description": "Evidence of Consumer Duty implementation across products and services, including fair value assessments and customer outcome monitoring.",
+        "owner": "Customer Outcomes Manager",
+        "status": "NOT_STARTED",
+        "evidenceRequired": true,
+        "notes": "Scheduled to commence Q2 2026."
+    },
+    {
+        "itemId": "SPI-004",
+        "title": "Financial Crime Controls",
+        "description": "Anti-money laundering and counter-terrorism financing controls, including transaction monitoring and suspicious activity reporting.",
+        "owner": "MLRO",
+        "status": "FINAL",
+        "evidenceRequired": true,
+        "notes": "Annual review completed. All controls operating effectively."
+    },
+    {
+        "itemId": "SPI-005",
+        "title": "Operational Resilience Framework",
+        "description": "Business continuity and operational resilience documentation, including impact tolerances and scenario testing results.",
+        "owner": "Chief Operating Officer",
+        "status": "REVIEW",
+        "evidenceRequired": true,
+        "notes": "Scenario testing completed. Final report pending."
+    },
+    {
+        "itemId": "SPI-006",
+        "title": "Governance & Board Oversight",
+        "description": "Board and committee structures, terms of reference, and evidence of effective oversight of key risks and controls.",
+        "owner": "Company Secretary",
+        "status": "FINAL",
+        "evidenceRequired": true,
+        "notes": "Annual governance review completed."
+    },
+    {
+        "itemId": "SPI-007",
+        "title": "Remuneration Policies & Procedures",
+        "description": "Remuneration policies aligned with FCA requirements, including risk adjustment mechanisms and deferral arrangements.",
+        "owner": "Head of Human Resources",
+        "status": "DRAFT",
+        "evidenceRequired": true,
+        "notes": "Policy update in progress to reflect latest FCA guidance."
+    },
+    {
+        "itemId": "SPI-008",
+        "title": "Conflicts of Interest Management",
+        "description": "Conflicts of interest policy, register, and evidence of effective management and disclosure procedures.",
+        "owner": "Compliance Manager",
+        "status": "FINAL",
+        "evidenceRequired": true,
+        "notes": "Quarterly review completed. No material conflicts identified."
+    },
+    {
+        "itemId": "SPI-009",
+        "title": "Outsourcing & Third-Party Risk Management",
+        "description": "Outsourcing register, due diligence procedures, and ongoing monitoring of material outsourcing arrangements.",
+        "owner": "Procurement Lead",
+        "status": "REVIEW",
+        "evidenceRequired": true,
+        "notes": "Annual third-party review in progress."
+    },
+    {
+        "itemId": "SPI-010",
+        "title": "Data Protection & Privacy Controls",
+        "description": "GDPR compliance documentation, data processing records, and privacy impact assessments.",
+        "owner": "Data Protection Officer",
+        "status": "FINAL",
+        "evidenceRequired": true,
+        "notes": "Annual GDPR audit completed. All controls satisfactory."
+    }
+]

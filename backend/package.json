@@ -1,0 +1,22 @@
+{
+  "name": "zastras-gov-backend",
+  "version": "1.0.0",
+  "description": "Backend for Zastras Governance",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/client-s3": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0",
+    "@aws-sdk/lib-storage": "^3.962.0",
+    "@aws-sdk/s3-request-presigner": "^3.0.0",
+    "archiver": "^7.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0"
+  }
+}
