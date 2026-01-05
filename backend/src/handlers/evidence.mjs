@@ -1,6 +1,6 @@
-import { PutObjectCommand, GetObjectCommand } from "@aws-sdk/client-s3";
+import { PutObjectCommand, GetObjectCommand, HeadObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { PutCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
+import { PutCommand, QueryCommand, DeleteCommand } from "@aws-sdk/lib-dynamodb";
 import { docClient, s3Client, TABLE_NAME, EVIDENCE_BUCKET, sendResponse, getUsername } from "../utils.mjs";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -17,27 +17,21 @@ export const presignUpload = async (event, regulatorKey, itemId) => {
         const mm = String(date.getMonth() + 1).padStart(2, '0');
         const dd = String(date.getDate()).padStart(2, '0');
 
-        // Key structure: evidence/<reg>/<item>/<yyyy>/<mm>/<dd>/<uuid>_<filename>
         const key = `evidence/${regulatorKey}/${itemId}/${yyyy}/${mm}/${dd}/${uuid}_${body.fileName}`;
 
-        const command = new PutObjectCommand({
+        const cmd = new PutObjectCommand({
             Bucket: EVIDENCE_BUCKET,
             Key: key,
             ContentType: body.contentType,
-            // Metadata: ... // Could add headers here
         });
 
-        const uploadUrl = await getSignedUrl(s3Client, command, { expiresIn: 3600 });
+        const uploadUrl = await getSignedUrl(s3Client, cmd, { expiresIn: 300 }); // 5 mins
 
-        return sendResponse(200, {
-            uploadUrl,
-            s3Key: key,
-            bucket: EVIDENCE_BUCKET
-        });
+        return sendResponse(200, { uploadUrl, s3Key: key });
 
     } catch (err) {
         console.error(err);
-        return sendResponse(500, { error: "Failed to generate presigned URL" });
+        return sendResponse(500, { error: "Failed to presign upload" });
     }
 };
 
@@ -59,10 +53,10 @@ export const commitEvidence = async (event, regulatorKey, itemId) => {
             SK: `EVID#${now}#${uuid}`,
             s3Key,
             fileName,
-            contentType,
-            sizeBytes,
-            uploadedBy: username,
+            contentType: contentType || "application/octet-stream",
+            sizeBytes: sizeBytes || 0,
             uploadedAt: now,
+            uploadedBy: username || "unknown",
             regulatorKey,
             itemId
         };
@@ -77,7 +71,7 @@ export const commitEvidence = async (event, regulatorKey, itemId) => {
         console.error(err);
         return sendResponse(500, { error: "Failed to commit evidence" });
     }
-};
+}
 
 export const listEvidence = async (event, regulatorKey, itemId) => {
     try {
@@ -91,7 +85,53 @@ export const listEvidence = async (event, regulatorKey, itemId) => {
         });
 
         const res = await docClient.send(cmd);
-        return sendResponse(200, { evidence: res.Items || [] });
+        const items = res.Items || [];
+
+        // Defensive: filter out records whose S3 object no longer exists.
+        // This handles the case where an object is deleted directly from S3, leaving behind DynamoDB metadata.
+        const keep = [];
+        const stale = [];
+
+        for (const it of items) {
+            const s3Key = it?.s3Key;
+            if (!s3Key) {
+                keep.push(it);
+                continue;
+            }
+
+            try {
+                await s3Client.send(new HeadObjectCommand({
+                    Bucket: EVIDENCE_BUCKET,
+                    Key: s3Key,
+                }));
+                keep.push(it);
+            } catch (e) {
+                const status = e?.$metadata?.httpStatusCode;
+                const name = e?.name || e?.Code || e?.code;
+
+                if (status === 404 || name === "NotFound" || name === "NoSuchKey") {
+                    stale.push(it);
+                    continue;
+                }
+
+                // If we cannot validate (eg AccessDenied), keep the item rather than hiding it.
+                console.warn("listEvidence: failed to head S3 object", { s3Key, status, name });
+                keep.push(it);
+            }
+        }
+
+        // Best-effort lazy cleanup: remove stale metadata rows.
+        if (stale.length) {
+            await Promise.allSettled(stale.map((it) => {
+                if (!it?.PK || !it?.SK) return Promise.resolve();
+                return docClient.send(new DeleteCommand({
+                    TableName: TABLE_NAME,
+                    Key: { PK: it.PK, SK: it.SK },
+                }));
+            }));
+        }
+
+        return sendResponse(200, { evidence: keep });
 
     } catch (err) {
         console.error(err);
