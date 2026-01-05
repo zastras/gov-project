@@ -268,4 +268,5 @@ Some roles are allowed to `PutObject` or `GetObject` (via presigned URLs) but no
 
 ## License
 
-Internal project. Add a license file if you intend to distribute externally.
+Internal project. 
+(Add a license file if you intend to distribute externally.)
